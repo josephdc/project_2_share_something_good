@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category_id: 1
+  user_id: MyString
+  date: 1
+  description: MyText
+  like_button: 1
+
+two:
+  category_id: 1
+  user_id: MyString
+  date: 1
+  description: MyText
+  like_button: 1
