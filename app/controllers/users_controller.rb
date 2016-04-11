@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
+  def new
+    @user = User.new
+  end
+
   def create
+    puts user_params
     user = User.new(user_params)
     if user.save
         flash[:success] = 'You have successfully created User Login!'
@@ -10,13 +15,16 @@ class UsersController < ApplicationController
     end
   end
 
-  def new
-    @user = User.new
-  end
+  private
 
-  def update
-  end
+    def user_params
+      params.require(:user).permit(:first_name, :last_name, :user_name, :city, :state, :email, :password, :password_confirmation)
+    end
 
-  def show
-  end
+    def update
+    end
+
+    def show
+    end
+
 end
