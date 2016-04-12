@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
       user = User.find_by(user_name: params[:user_name])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to category_topic_path, notice: 'Welcome!'
+      redirect_to categories_path
     else
       flash[:error] = 'Invalid login credentials - Try again!'
       render 'new'

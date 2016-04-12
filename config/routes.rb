@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
-
-  get 'category/topic'
-
   root 'welcome#index'
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :users, except: [:index, :destroy]
+  resources :categories, only: [:show, :index]
 
+  post "/posts" => "posts#create"
   get "/register", to: "users#new"
   get "/login", to: "sessions#new"
+  get "users/:id/edit" => "users#edit"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

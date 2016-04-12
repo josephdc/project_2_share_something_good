@@ -10,7 +10,6 @@ class UsersController < ApplicationController
         flash[:success] = 'You have successfully created User Login!'
         session[:user_id]
         redirect_to root_path
-
     else
         flash[:error] = 'Creating User has failed!'
         redirect_to new_user_path, notice: 'Please, try creating again.'
@@ -19,17 +18,22 @@ class UsersController < ApplicationController
 
   private
 
-    def user_params
+  def user_params
       params.require(:user).permit(:first_name, :last_name, :user_name, :city, :state, :email, :password, :password_confirmation)
-    end
+  end
 
-    def update
-    end
+  def update
+     if @user.update_attributes(user_params)
+        redirect_to users_path
+     else
+        render :edit
+     end
+  end
 
-    def edit
-    end
+  def edit
+      @user = User.find(params[:id])
+  end
 
-    def show
-    end
-
+  def show
+  end
 end

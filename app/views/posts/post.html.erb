@@ -4,14 +4,13 @@
         <div><%= msg %></div>
     <% end %>
 
-    <%= f.label :user_name %>
-    <%= f.text_field :user_name %>
+    <%= f.hidden_field :category_id, :value => params[:category_id] %>
 
-    <%= f.label :city %>
-    <%= f.text_field :city %>
 
-    <%= f.label :state %>
-    <%= f.text_field :state %>
+    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+
+<%= f.text_area :description %>
 
     <%= f.submit "Post" %>
 <% end %>
+
