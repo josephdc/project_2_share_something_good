@@ -8,10 +8,12 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
         flash[:success] = 'You have successfully created User Login!'
-        redirect_to user_path user.id
+        session[:user_id]
+        redirect_to root_path
+
     else
         flash[:error] = 'Creating User has failed!'
-        redirect_to new_user_path
+        redirect_to new_user_path, notice: 'Please, try creating again.'
     end
   end
 
@@ -22,6 +24,9 @@ class UsersController < ApplicationController
     end
 
     def update
+    end
+
+    def edit
     end
 
     def show

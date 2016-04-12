@@ -1,0 +1,17 @@
+<h1>Create Post</h1>
+<%= form_for @post do |f| %>
+    <% flash.each do |key, msg| %>
+        <div><%= msg %></div>
+    <% end %>
+
+    <%= f.label :user_name %>
+    <%= f.text_field :user_name %>
+
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+
+    <%= f.label :state %>
+    <%= f.text_field :state %>
+
+    <%= f.submit "Post" %>
+<% end %>
