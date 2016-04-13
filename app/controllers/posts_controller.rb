@@ -2,12 +2,13 @@ class PostsController < ApplicationController
 
     def create
       @post = Post.new(post_params)
+      @post.user_id = @post.user_id.to_i
         respond_to do |format|
           if @post.save
             format.html { redirect_to @post.category, notice: "Post was successfully created." }
             format.json { render :show, status: :created, location: @post }
           else
-            format.html { render :new }
+            format.html { redirect_to @post.category, notice: @post.errors.full_messages.to_sentence }
             format.json {render json: @post.errors, status: :unprocessable_entity }
           end
         end
@@ -18,6 +19,7 @@ class PostsController < ApplicationController
     end
 
     def show
+      @post = Post.find(params[:id])
     end
 
     def new
@@ -26,37 +28,33 @@ class PostsController < ApplicationController
     end
 
     def edit
-        @post = Post.new
-          render "post"
+        @post = Post.find(params[:id])
     end
 
     def update
-      respond_to do |format|
-      if @post.update(post_params)
-        format.html {redirect_to @post, notice: 'Your Post was successfully updated.'}
-        format.json { render :show, status: :ok, location: @post }
+      @post = Post.find(params[:id])
+
+      if @post.update_attributes(post_params)
+          redirect_to post_path(@post)
       else
-        format.html { render :edit }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+          render :edit
       end
     end
-  end
 
     def destroy
+        @post = Post.find(params[:id])
         @post.destroy
-        respond_to do |format|
-        format.html { redirect_to post_url, notice: "Your Post was successfully deleted."}
-        format.json { head :no_content }
-      end
+        redirect_to posts_path
     end
 
     private
 
+    def post_params
+        params.require(:post).permit(:description, :user_id, :category_id )
+    end
     def set_post
         @post = Post.find(params[:id])
     end
 
-    def post_params
-        params.require(:post).permit(:description, :user_id, :category_id )
-    end
+
 end

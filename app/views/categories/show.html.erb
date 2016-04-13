@@ -1,11 +1,16 @@
 <h1> <%= @category.topic %> </h1>
 
     <% @category.posts.each do |post| %>
-    <%= post.description %>
+        <div><%= post.description %></div>
 
-<%end%>
+        <div><%= post.user.user_name %></div>
 
-<h1>Create Post</h1>
+        <%= link_to 'Edit Post', edit_post_path(session[:user_id]), method: :get %>
+    <%end%>
+
+<h3>Share Something GOOD!</h3>
+<h5>Create Post</h5>
+
     <%= form_for @post do |f| %>
     <% flash.each do |key, msg| %>
         <div><%= msg %></div>
@@ -18,5 +23,6 @@
     <%= f.text_area :description %>
 
     <%= f.submit "Post" %>
+
     <% end %>
 

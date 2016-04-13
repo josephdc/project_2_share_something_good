@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   get "/register", to: "users#new"
   get "/login", to: "sessions#new"
   get "users/:id/edit" => "users#edit"
+  get "posts/:id/edit" => "posts#edit", as: :edit_post
+  get "posts/:id" => "posts#show", as: :post
 
+  patch "posts/:id" => "posts#update"
+  delete "posts/:id" => "posts#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

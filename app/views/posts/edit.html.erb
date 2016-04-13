@@ -1,0 +1,20 @@
+<h1>Edit this post!</h1>
+
+<%= form_for @post, url: "/posts/#{params[:id]}", method: "patch" do |f| %>
+
+    <div>
+        <%= f.label :user_id %>
+        <%= f.text_field :user_id %>
+    </div>
+
+    <div>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+
+    </div>
+
+    <%= f.submit "Submit these changes!" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", posts_path %>

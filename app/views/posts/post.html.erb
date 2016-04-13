@@ -1,16 +1,16 @@
-<h1>Create Post</h1>
+<h1>Write Post</h1>
+
+
 <%= form_for @post do |f| %>
     <% flash.each do |key, msg| %>
         <div><%= msg %></div>
     <% end %>
 
     <%= f.hidden_field :category_id, :value => params[:category_id] %>
-
-
     <%= f.hidden_field :user_id, :value => session[:user_id] %>
-
-<%= f.text_area :description %>
+    <%= f.text_area :description %>
 
     <%= f.submit "Post" %>
+
 <% end %>
 
