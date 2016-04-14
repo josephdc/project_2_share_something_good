@@ -2,10 +2,12 @@
 
 <%= form_for @post, url: "/posts/#{params[:id]}", method: "patch" do |f| %>
 
+
     <div>
         <%= f.label :description %>
         <%= f.text_field :description %>
     </div>
+
 
     <%= f.submit "Submit these changes!" %>
 

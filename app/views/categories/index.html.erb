@@ -1,6 +1,12 @@
+<div class="h1">
 <h1>Select a Category</h1>
+</div>
 
+<div>
 <% @categories.each do |category| %>
-  <%= link_to category.topic, category_path(category) %>
+<div class= "category_style col-sm-5">
+ <div class="btn btn-default col-sm-12"> <%= link_to category.topic, category_path(category) %> </div>
+</div>
+</div>
 <% end %>
 

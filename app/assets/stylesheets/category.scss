@@ -1,3 +1,110 @@
+.category_style {
+  text-align: center;
+
+}
+
+.h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+
+}
+
+.description {
+  text-align: center;
+}
+
+.category-Achievements {
+  background-image: image-url("AchievementsImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 92%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Friends {
+  background-image: image-url("FriendsImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Family {
+  background-image: image-url("FamilyImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Volunteer {
+  background-image: image-url("VolunteerImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Baby {
+  background-image: image-url("BabyImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Sobriety {
+  background-image: image-url("SobrietyImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Graduations {
+  background-image: image-url("GradationImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Engagements {
+  background-image: image-url("EngagementImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Weddings {
+  background-image: image-url("WeddingImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+
+}
+
+.category-Friday {
+  background-image: image-url("ItsFridayImage.png");
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 // Place all the styles related to the Category controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/

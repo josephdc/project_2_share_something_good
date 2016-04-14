@@ -1,3 +1,7 @@
+
+<div class="category-container">
+<div class="body">
+
 <h1> <%= @category.topic %> </h1>
 
     <% @category.posts.each do |post| %>
@@ -9,8 +13,8 @@
     <%end%>
 
 <h3>Share Something GOOD!</h3>
-<h5>Create Post</h5>
 
+    <div class="description">
     <%= form_for @post do |f| %>
     <% flash.each do |key, msg| %>
         <div><%= msg %></div>
@@ -23,6 +27,7 @@
     <%= f.text_area :description %>
 
     <%= f.submit "Post" %>
-
+    </div>
     <% end %>
-
+</div>
+</div>
