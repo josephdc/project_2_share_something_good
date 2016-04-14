@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, except: [:index, :destroy]
   resources :categories, only: [:show, :index]
 
+
   post "/posts" => "posts#create"
   get "/register", to: "users#new"
   get "/login", to: "sessions#new"

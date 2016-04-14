@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+before_action :only_my_post, only: [:edit, :update, :destroy]
+
     def create
       @post = Post.new(post_params)
       @post.user_id = @post.user_id.to_i
@@ -43,8 +45,9 @@ class PostsController < ApplicationController
 
     def destroy
         @post = Post.find(params[:id])
+        category = @post.category
         @post.destroy
-        redirect_to posts_path
+        redirect_to category_path(category)
     end
 
     private
@@ -56,5 +59,9 @@ class PostsController < ApplicationController
         @post = Post.find(params[:id])
     end
 
+    def only_my_post
+        @post = Post.find(params[:id])
+        redirect_to category_path(category), notice: "Not authorized!" if (current_user.id != @post.user.id)
+  end
 
 end

@@ -5,7 +5,7 @@
 
         <div><%= post.user.user_name %></div>
 
-        <%= link_to 'Edit Post', edit_post_path(session[:user_id]), method: :get %>
+        <%= link_to 'Edit', edit_post_path([post.id]), method: :get %>
     <%end%>
 
 <h3>Share Something GOOD!</h3>
