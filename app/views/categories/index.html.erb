@@ -3,11 +3,13 @@
 <h2>Select a Category</h2>
 
 <div>
-<% @categories.each do |category| %>
+
+    <% @categories.each do |category| %>
   <div class= "row">
-<div class= "category_style col-sm-4"></div>
-<div class="btn btn-default col-sm-4"> <%= link_to category.topic, category_path(category) %> </div>
+  <div class= "category_style col-sm-4"></div>
+  <div class="btn btn-default col-sm-4"> <%= link_to category.topic, category_path(category) %> </div>
+
   </div>
-  </div>
+</div>
 <% end %>
 

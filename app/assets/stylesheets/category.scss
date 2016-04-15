@@ -1,7 +1,5 @@
 .category_style {
   text-align: center;
-
-
 }
 
 h1 {
@@ -20,11 +18,27 @@ h2 {
 
 h3 {
   text-align: center;
-
 }
 
 .description {
   text-align: center;
+  font-size: 25px;
+}
+
+.edit-tab {
+  font-size: 15px;
+}
+
+.post-user{
+  font-size: 10px;
+}
+
+.post-scroll {
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  color: black;
 }
 
 .category-Achievements {
@@ -33,7 +47,6 @@ h3 {
   background-size: 100% 92%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Friends {
@@ -42,7 +55,6 @@ h3 {
   background-size: 100% 90%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Family {
@@ -51,7 +63,6 @@ h3 {
   background-size: 100% 100%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Volunteer {
@@ -60,7 +71,6 @@ h3 {
   background-size: 100% 90%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Baby {
@@ -78,7 +88,6 @@ h3 {
   background-size: 100% 90%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Graduations {
@@ -87,7 +96,6 @@ h3 {
   background-size: 100% 90%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Engagements {
@@ -96,7 +104,6 @@ h3 {
   background-size: 100% 90%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Weddings {
@@ -105,7 +112,6 @@ h3 {
   background-size: 100% 90%;
   background-attachment: fixed;
   background-position: center;
-
 }
 
 .category-Friday {
@@ -115,12 +121,6 @@ h3 {
   background-attachment: fixed;
   background-position: center;
 }
-
-.post-scroll {
-  text-align: center;
-
-}
-
 
 
 // Place all the styles related to the Category controller here.

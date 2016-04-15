@@ -21,7 +21,7 @@ before_action :only_my_post, only: [:edit, :update, :destroy]
     end
 
     def show
-      @post = Post.find(params[:id])
+        @post = Post.find(params[:id])
     end
 
     def new
@@ -34,7 +34,7 @@ before_action :only_my_post, only: [:edit, :update, :destroy]
     end
 
     def update
-      @post = Post.find(params[:id])
+        @post = Post.find(params[:id])
 
       if @post.update_attributes(post_params)
           redirect_to post_path(@post)
@@ -63,5 +63,4 @@ before_action :only_my_post, only: [:edit, :update, :destroy]
         @post = Post.find(params[:id])
         redirect_to category_path(category), notice: "Not authorized!" if (current_user.id != @post.user.id)
   end
-
 end

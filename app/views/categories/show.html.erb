@@ -1,4 +1,5 @@
 <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
 
 <div class="category-container">
 <div class="body">
@@ -6,30 +7,36 @@
 <h1> <%= @category.topic %> </h1>
 
     <div class="post-scroll">
-    <% @category.posts.each do |post| %>
-        <div><%= post.description %></div>
+        <% @category.posts.each do |post| %>
+    <div><%= post.description %></div>
 
-        <div><%= post.user.user_name %></div>
+    <div class='post-user'>
+        <%= post.user.user_name %>
+    </div>
 
+    <div class='edit-tab'>
         <%= link_to 'Edit', edit_post_path([post.id]), method: :get %>
+    </div>
     <%end%>
     </div>
 
-<h3>Share Something GOOD!</h3>
+
 
     <div class="description">
-    <%= form_for @post do |f| %>
-    <% flash.each do |key, msg| %>
-        <div><%= msg %></div>
+        <%= form_for @post do |f| %>
+        <% flash.each do |key, msg| %>
+    <div><%= msg %></div>
     <% end %>
 
-    <%= f.hidden_field :category_id, :value => params[:id] %>
+        <%= f.hidden_field :category_id, :value => params[:id] %>
 
-    <%= f.hidden_field :user_id, :value => session[:user_id] %>
+        <%= f.hidden_field :user_id, :value => session[:user_id] %>
 
-    <%= f.text_area :description %>
-
-    <%= f.submit "Post" %>
+        <%= f.text_area :description %>
+    <h3>Share Something GOOD!</h3>
+    <div class='post-button'>
+        <%= f.submit "Post" %>
+    </div>
     </div>
     <% end %>
 </div>
