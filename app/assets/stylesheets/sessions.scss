@@ -3,11 +3,12 @@
 
 }
 
-#login {
+.container {
   background-image: image-url("Cover.png");
-  position: relative;
-  background-size: 1300px;
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
   background-attachment: fixed;
+  background-position: center;
 }
 
 
