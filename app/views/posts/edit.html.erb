@@ -1,5 +1,7 @@
-<h1>Edit this post!</h1>
 
+
+<h1>Edit this post!</h1>
+<div class="edit-post">
 <%= form_for @post, url: "/posts/#{params[:id]}", method: "patch" do |f| %>
 
 
@@ -13,7 +15,8 @@
 
 <% end %>
 
-<%= link_to "Back to Post", category_path(@post.category) %>
-
+<%= link_to "Post page", category_path(@post.category) %>
 <%= link_to "Delete", post_path, method: :delete, data: { confirm: "Are you sure you want to delete this Post?"} %>
+</div>
 
+<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>

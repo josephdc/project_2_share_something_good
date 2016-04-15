@@ -7,11 +7,11 @@
 
 <form>
 
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.label :first_name, class: 'sr-only' %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
 
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.label :last_name, class: 'sr-only'%>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
 
     <%= f.label :user_name %>
     <%= f.text_field :user_name %>
