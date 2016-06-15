@@ -3,10 +3,11 @@
 <h1>Edit this post!</h1>
 
 <div class="edit-post">
+<%= form_for @post, url: "/posts/#{params[:id]}", method: "patch" do |f| %>
       <%= f.label :description %>
       <%= f.text_field :description %>
 
-      <%= form_for @post, url: "/posts/#{params[:id]}", method: "patch" do |f| %>
+
 
 </div>
 

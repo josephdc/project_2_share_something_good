@@ -61,6 +61,6 @@ before_action :only_my_post, only: [:edit, :update, :destroy]
 
     def only_my_post
         @post = Post.find(params[:id])
-        redirect_to category_path(category), notice: "Not authorized!" if (current_user.id != @post.user.id)
+        redirect_to @post.category, notice: "Must be original publisher" if (current_user.id != @post.user.id)
   end
 end
