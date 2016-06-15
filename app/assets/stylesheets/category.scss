@@ -1,5 +1,7 @@
-.category_style {
+#category-list {
   text-align: center;
+  margin-left: 40%;
+  margin-top: 5%;
 }
 
 h1 {
@@ -22,7 +24,7 @@ h3 {
 
 .description {
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .edit-tab {
@@ -35,91 +37,120 @@ h3 {
 
 .post-scroll {
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
   text-transform: uppercase;
   font-family: 'Dosis', sans-serif;
   color: black;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 100px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+// .gallery-cell:before {
+//   display: block;
+//   text-align: center;
+//   content: counter(gallery-cell);
+//   line-height: 200px;
+//   font-size: 80px;
+//   color: white;
+// }
+
+
 .category-Achievements {
-  background-image: image-url("AchievementsImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 92%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("AchievementsImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 92%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Friends {
-  background-image: image-url("FriendsImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("FriendsImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Family {
-  background-image: image-url("FamilyImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("FamilyImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 100%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Volunteer {
-  background-image: image-url("VolunteerImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("VolunteerImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Baby {
-  background-image: image-url("BabyImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
-
+  // background-image: image-url("BabyImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Sobriety {
-  background-image: image-url("SobrietyImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("SobrietyImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Graduations {
-  background-image: image-url("GradationImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("GradationImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Engagements {
-  background-image: image-url("EngagementImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("EngagementImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Weddings {
-  background-image: image-url("WeddingImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("WeddingImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 .category-Friday {
-  background-image: image-url("ItsFridayImage.png");
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-attachment: fixed;
-  background-position: center;
+  // background-image: image-url("ItsFridayImage.png");
+  // background-repeat: no-repeat;
+  // background-size: 100% 90%;
+  // background-attachment: fixed;
+  // background-position: center;
 }
 
 

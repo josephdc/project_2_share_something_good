@@ -3,13 +3,12 @@
 <h1>Edit this post!</h1>
 
 <div class="edit-post">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
       <%= form_for @post, url: "/posts/#{params[:id]}", method: "patch" do |f| %>
 
-
-    <div>
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-    </div>
+</div>
 
     <%= f.submit "Submit these changes!" %>
 

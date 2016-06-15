@@ -1,18 +1,18 @@
 <h1>Write Post</h1>
 
 
-<%= form_for @post do |f| %>
+    <%= form_for @post do |f| %>
     <% flash.each do |key, msg| %>
-        <div><%= msg %></div>
+<div><%= msg %></div>
     <% end %>
 
     <%= f.hidden_field :category_id, :value => params[:category_id] %>
     <%= f.hidden_field :user_id, :value => session[:user_id] %>
     <%= f.text_area :description %>
 
-    <div class='post-button'>
+<div class='post-button'>
     <%= f.submit "Post" %>
-    </div>
+</div>
 
 <% end %>
 

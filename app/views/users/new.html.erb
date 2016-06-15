@@ -1,59 +1,56 @@
 <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 
 <h1>Create New User</h1>
-    <div class='row'>
 
-<%= form_for @user do |f| %>
+
+    <%= form_for @user do |f| %>
     <% flash.each do |key, msg| %>
-        <div><%= msg %></div>
+    <div><%= msg %></div>
     <% end %>
 
 <form>
-<div class='col-md-1'>
+<div class='col-md-7' 'row-1' >
     <%= f.label :first_name, class:'sr-only'%>
     <%= f.text_field :first_name, placeholder: "First Name"%>
-</div>
 
-<div class='col-md-1'>
     <%= f.label :last_name, class: 'sr-only'%>
     <%= f.text_field :last_name, placeholder: "Last Name"%>
 </div>
 
-<div class='col-md-1'>
+<div class= 'col-md-7' 'row'>
     <%= f.label :user_name, class: 'sr-only' %>
     <%= f.text_field :user_name, placeholder: "User Name" %>
 </div>
 
-<div class='col-md-1'>
+<div class= 'col-md-7' 'row'>
     <%= f.label :city, class: 'sr-only' %>
     <%= f.text_field :city, placeholder: "City" %>
-</div>
 
-<div class='col-md-1'>
     <%= f.label :state, class: 'sr-only' %>
     <%= f.text_field :state, placeholder: "State" %>
 </div>
 
-<div class='col-md-1'>
+<div class= 'col-md-7' 'row'>
     <%= f.label :email, class: 'sr-only' %>
     <%= f.email_field :email, placeholder: "Email" %>
 </div>
 
-<div class='col-md-1'>
+<div class= 'col-md-7' 'row'>
     <%= f.label :password, class: 'sr-only'  %>
     <%= f.password_field :password, placeholder: "Password" %>
-</div>
 
-<div class='col-md-1'>
     <%= f.label :password_confirmation, class: 'sr-only' %>
     <%= f.password_field :password_confirmation, placeholder: "Password Confrimation" %>
 </div>
 
-<div class='col-md-1'>
+<div class= 'col-md-7' 'row'>
     <%= f.submit  "Register" %>
 </div>
+
 <% end %>
+</div>
+</div>
 </form>
-    </div>
+
 
 
