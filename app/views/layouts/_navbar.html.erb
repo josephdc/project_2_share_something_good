@@ -15,7 +15,7 @@
 
       <ul class="nav navbar-nav navbar-left">
        <% if current_user %>
-          <li><a><%= current_user.user_name %></a></li>
+          <li><a><strong><%= current_user.user_name %></strong></a></li>
           <li><%= link_to 'Logout', session_path('dummy'), method: :delete %></li>
           <li><%= link_to 'Edit Profile', edit_user_path(session[:user_id]), method: :get %></li>
           <li><%= link_to 'Categories', categories_path %></li>

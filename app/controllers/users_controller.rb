@@ -20,11 +20,11 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-    if current_user != user_id
-    redirect_to categories_path
+      if current_user.id == @user.id
+        redirect_to categories_path
+      end
     else
       render :edit
-    end
     end
   end
 
