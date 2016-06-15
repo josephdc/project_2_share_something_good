@@ -1,27 +1,23 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to "Share Something Good"! 
 
-Things you may want to cover:
+"Share Somthing Good is an app that allows you to post postive experiences and comments in a variety of categorie/topics. 
 
-* Ruby version
+When you vist SSG, as a New User you will have to create a "User Profile". Once you have completed the User Profile and created a "User Name", you will then be introduced to a Welcome page. The Welcome page will present you with the basics needed to nagivate the app. 
 
-* System dependencies
+As a New User and existing User - once you login you can then immediately start posting in a category that best fits your story. You will be prompted to select a category you can browse or post in. 
 
-* Configuration
+If you need to update your User Profile you can do this at anytime by clicking "Update Profile". 
 
-* Database creation
+Once you create a post you can edit or delete it. As a User, you will only have access to update and delete your own post. 
 
-* Database initialization
 
-* How to run the test suite
+Link to Project --> https://share-something-good.herokuapp.com/login
+Pivotal Tracker --> https://www.pivotaltracker.com/n/projects/1558199
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
 
 
 Please feel free to use a different markup language if you do not plan to run
