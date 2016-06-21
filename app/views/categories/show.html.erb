@@ -14,8 +14,8 @@
         <%= post.user.user_name %>
     </div>
 
-    <div class='edit-tab'>
-        <%= link_to 'Edit', edit_post_path([post.id]), method: :get %>
+    <div class='edit-tab' >
+        <%= link_to 'Edit Post', edit_post_path([post.id]), method: :get, class: "btn btn-default btn-xs" %>
     </div>
     <%end%>
     </div>
@@ -34,7 +34,7 @@
         <%= f.text_area :description %>
     <h3>Share Something GOOD!</h3>
     <div class='post-button'>
-        <%= f.submit "Post", class: "btn btn-default" %>
+        <%= f.submit "Post", class: "btn btn-default btn-sm" %>
     </div>
     </div>
     <% end %>

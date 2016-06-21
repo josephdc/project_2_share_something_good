@@ -1101,12 +1101,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: lightgrey;
+  color: black;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: yellow;
+  color: red;
   text-decoration: underline;
 }
 a:focus {
@@ -4519,8 +4519,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: yellow;
-  background-color: transparent;
+  color: black;
+  background-color: lightgrey;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
